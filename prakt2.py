@@ -61,9 +61,8 @@ def SerpinskyTriangle():
         print(x12)
         return
 
-#    list(map(lambda x, y: y==None and (y = vertices[0], x = vertices[1]) or vertices[0],vertices))
-
-#   middle = lambda j, vertices: j < 2 and ( map ((vertices[j][0]+vertices[j+1][0])/2, (vertices[j][1]+vertices[j+1][1])/2, vertices), middle(j+1, vertices) ) or vertices
+    #FUNCTIONAL PARADIGM AND VERTICES CALCULATION STARTS HERE 
+    
     elapesed_ms = glutGet(GLUT_ELAPSED_TIME)
     draw_triangle = lambda x1, y1, x2, y2, x3, y3, i: (i < n  ) and (
                                                     glBegin(GL_LINE_STRIP),
@@ -81,7 +80,8 @@ def SerpinskyTriangle():
                                                     update_middles(x1, y1, x2, y2, x3, y3))
 
     draw_triangle(x1, y1, x2, y2, x3, y3, 0)
-
+    
+    #FUNCTIONAL PARADIGM AND VERTICES CALCULATION ENDS HERE 
 
 def iterate():
     glViewport(0, 0, 500, 500)
